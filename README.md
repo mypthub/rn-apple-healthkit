@@ -1,25 +1,33 @@
 # React Native Apple Healthkit
-A React Native bridge module for interacting with Apple Healthkit data. Checkout the [full documentation](https://github.com/terrillo/rn-apple-healthkit/tree/master/docs)
+
+A React Native bridge module for interacting with Apple Healthkit data. Check out the [full documentation](https://github.com/terrillo/rn-apple-healthkit/tree/master/docs). This fork of [terrillo/rn-apple-healthkit](https://github.com/terrillo/rn-apple-healthkit) includes Distance Swimming and handling for workoutType.
+
+---
 
 ## Installation
 
 Install the [rn-apple-healthkit] package from npm:
 
-- Run `npm install rn-apple-healthkit --save`
-- Run `react-native link rn-apple-healthkit`
+- Run `npm i rn-apple-healthkit`
+- Run `react-native link rn-apple-healthkit` (if your react native version is < 0.60)
 - Run `cd ./ios && pod install`
-- Update `./ios/<Project Name>/info.plist` in your React Native project
-```
+- Update `./ios/<Project Name>/info.plist` in your React Native project:
+
+```xml
 <key>NSHealthShareUsageDescription</key>
 <string>Read and understand health data.</string>
 <key>NSHealthUpdateUsageDescription</key>
 <string>Share workout data with other apps.</string>
 ```
-- Enable Healthkit in your application's `Capabilities`
-![](https://i.imgur.com/eOCCCyv.png "Xcode Capabilities Section")
+
+- Enable Healthkit in your application's `Capabilities`:
+
+![Xcode Capabilities Section](https://i.imgur.com/eOCCCyv.png)
+
 - Build and run
 
 ## Get Started
+
 Initialize Healthkit. This will show the Healthkit permissions prompt for any read/write permissions set in the required `options` object.
 
 Due to Apple's privacy model if an app user has previously denied a specific permission then they can not be prompted again for that same permission. The app user would have to go into the Apple Health app and grant the permission to your react-native app under *sources* tab.
@@ -65,57 +73,58 @@ Height Example Response
 ```
 
 ## Wiki
-  * [Installation](/docs/Install)
-  * [Documentation](#documentation)
-    * [Permissions](#supported-apple-permissions)
-    * [Units](#units)
-    * Base Methods
-      * [isAvailable](/docs/isAvailable().md)
-      * [initHealthKit](/docs/initHealthKit().md)
-      * [authorizationStatusForType](/docs/authorizationStatusForType().md)
-    * Realtime Methods
-      * [initStepCountObserver](/docs/initStepCountObserver().md)
-      * [setObserver](/docs/setObserver().md)
-    * Read Methods
-      * [getActiveEnergyBurned](/docs/getActiveEnergyBurned().md)
-      * [getBasalEnergyBurned](/docs/getBasalEnergyBurned().md)
-      * [getBiologicalSex](/docs/getBiologicalSex().md)
-      * [getBloodGlucoseSamples](/docs/getBloodGlucoseSamples().md)
-      * [getBloodPressureSamples](/docs/getBloodPressureSamples().md)
-      * [getBodyTemperatureSamples](/docs/getBodyTemperatureSamples().md)
-      * [getDailyDistanceCyclingSamples](/docs/getDailyDistanceCyclingSamples().md)
-      * [getDailyDistanceWalkingRunningSamples](/docs/getDailyDistanceWalkingRunningSamples().md)
-      * [getDailyFlightsClimbedSamples](/docs/getDailyFlightsClimbedSamples().md)
-      * [getDailyStepCountSamples](/docs/getDailyStepCountSamples().md)
-      * [getDateOfBirth](/docs/getDateOfBirth().md)
-      * [getDistanceCycling](/docs/getDistanceCycling().md)
-      * [getDistanceSwimming](/docs/getDistanceSwimming().md)
-      * [getDistanceWalkingRunning](/docs/getDistanceWalkingRunning().md)
-      * [getFlightsClimbed](/docs/getFlightsClimbed().md)
-      * [getHeartRateSamples](/docs/getHeartRateSamples().md)
-      * [getHeightSamples](/docs/getHeightSamples().md)
-      * [getLatestBmi](/docs/getLatestBmi().md)
-      * [getLatestBodyFatPercentage](/docs/getLatestBodyFatPercentage().md)
-      * [getBodyFatPercentageSamples](/docs/getBodyFatPercentageSamples().md)
-      * [getLatestHeight](/docs/getLatestHeight().md)
-      * [getLatestLeanBodyMass](/docs/getLatestLeanBodyMass().md)
-      * [getLeanBodyMassSamples](/docs/getLeanBodyMassSamples().md)
-      * [getLatestWeight](/docs/getLatestWeight().md)
-      * [getRespiratoryRateSamples](/docs/getRespiratoryRateSamples().md)
-      * [getSleepSamples](/docs/getSleepSamples().md)
-      * [getStepCount](/docs/getStepCount().md)
-      * [getWeightSamples](/docs/getWeightSamples().md)
-      * [getSamples](docs/getSamples().md)
-      * [getMindfulSession](docs/getMindfulSession().md) 
-    * Write Methods
-      * [saveBmi](/docs/saveBmi().md)
-      * [saveHeight](/docs/saveHeight().md)
-      * [saveMindfulSession](/docs/saveMindfulSession().md)
-      * [saveWeight](/docs/saveWeight().md)
-      * [saveSteps](/docs/saveSteps().md)
-      * [saveBodyFatPercentage](/docs/saveBodyFatPercentage().md)
-      * [saveLeanBodyMass](/docs/saveLeanBodyMass().md)
-  * [References](#references)
+
+  - [Installation](/docs/Install)
+  - [Documentation](#documentation)
+    - [Permissions](#supported-apple-permissions)
+    - [Units](#units)
+    - Base Methods
+      - [isAvailable](/docs/isAvailable().md)
+      - [initHealthKit](/docs/initHealthKit().md)
+      - [authorizationStatusForType](/docs/authorizationStatusForType().md)
+    - Realtime Methods
+      - [initStepCountObserver](/docs/initStepCountObserver().md)
+      - [setObserver](/docs/setObserver().md)
+    - Read Methods
+      - [getActiveEnergyBurned](/docs/getActiveEnergyBurned().md)
+      - [getBasalEnergyBurned](/docs/getBasalEnergyBurned().md)
+      - [getBiologicalSex](/docs/getBiologicalSex().md)
+      - [getBloodGlucoseSamples](/docs/getBloodGlucoseSamples().md)
+      - [getBloodPressureSamples](/docs/getBloodPressureSamples().md)
+      - [getBodyTemperatureSamples](/docs/getBodyTemperatureSamples().md)
+      - [getDailyDistanceCyclingSamples](/docs/getDailyDistanceCyclingSamples().md)
+      - [getDailyDistanceWalkingRunningSamples](/docs/getDailyDistanceWalkingRunningSamples().md)
+      - [getDailyFlightsClimbedSamples](/docs/getDailyFlightsClimbedSamples().md)
+      - [getDailyStepCountSamples](/docs/getDailyStepCountSamples().md)
+      - [getDateOfBirth](/docs/getDateOfBirth().md)
+      - [getDistanceCycling](/docs/getDistanceCycling().md)
+      - [getDistanceSwimming](/docs/getDistanceSwimming().md)
+      - [getDistanceWalkingRunning](/docs/getDistanceWalkingRunning().md)
+      - [getFlightsClimbed](/docs/getFlightsClimbed().md)
+      - [getHeartRateSamples](/docs/getHeartRateSamples().md)
+      - [getHeightSamples](/docs/getHeightSamples().md)
+      - [getLatestBmi](/docs/getLatestBmi().md)
+      - [getLatestBodyFatPercentage](/docs/getLatestBodyFatPercentage().md)
+      - [getBodyFatPercentageSamples](/docs/getBodyFatPercentageSamples().md)
+      - [getLatestHeight](/docs/getLatestHeight().md)
+      - [getLatestLeanBodyMass](/docs/getLatestLeanBodyMass().md)
+      - [getLeanBodyMassSamples](/docs/getLeanBodyMassSamples().md)
+      - [getLatestWeight](/docs/getLatestWeight().md)
+      - [getRespiratoryRateSamples](/docs/getRespiratoryRateSamples().md)
+      - [getSleepSamples](/docs/getSleepSamples().md)
+      - [getStepCount](/docs/getStepCount().md)
+      - [getWeightSamples](/docs/getWeightSamples().md)
+      - [getSamples](docs/getSamples().md)
+      - [getMindfulSession](docs/getMindfulSession().md) 
+    - Write Methods
+      - [saveBmi](/docs/saveBmi().md)
+      - [saveHeight](/docs/saveHeight().md)
+      - [saveMindfulSession](/docs/saveMindfulSession().md)
+      - [saveWeight](/docs/saveWeight().md)
+      - [saveSteps](/docs/saveSteps().md)
+      - [saveBodyFatPercentage](/docs/saveBodyFatPercentage().md)
+      - [saveLeanBodyMass](/docs/saveLeanBodyMass().md)
+  - [References](#references)
 
 ## Supported Apple Permissions
 
@@ -169,6 +178,7 @@ const healthKitOptions = {
 ```
 
 ## Units
+
 - bpm
 - calorie
 - celsius
@@ -190,8 +200,8 @@ const healthKitOptions = {
 - pound
 - second
 
-
 ## References
+
 - Apple Healthkit Documentation [https://developer.apple.com/Healthkit/](https://developer.apple.com/Healthkit/)
 
 > *This package is an original fork of [react-native-apple-Healthkit](https://github.com/GregWilson/react-native-apple-Healthkit)*

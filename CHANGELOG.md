@@ -1,5 +1,8 @@
 # Changelog
 
+1.0.0 - My PT Hub fork start
+Added distance swimming and workout type handling
+
 0.8.0v
 - Added Support to read Mindfulness data from HealthKit [#139](https://github.com/terrillo/rn-apple-healthkit/pull/139)
 - Biological sex permission request [#136](https://github.com/terrillo/rn-apple-healthkit/pull/136)
