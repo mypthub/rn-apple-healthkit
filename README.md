@@ -6,8 +6,9 @@ A React Native bridge module for interacting with Apple Healthkit data. Check ou
 
 ## Installation
 
-Install the [rn-apple-healthkit] package from npm:
+Install the [@mypthub/rn-apple-healthkit] package from GitHub packages:
 
+- Make sure your npmrc file is set up to access packages from the @mypthub repository. [Read more here](https://docs.github.com/en/free-pro-team@latest/packages/guides/configuring-npm-for-use-with-github-packages#installing-packages-from-other-organizations).
 - Run `npm i rn-apple-healthkit`
 - Run `react-native link rn-apple-healthkit` (if your react native version is < 0.60)
 - Run `cd ./ios && pod install`
@@ -41,7 +42,7 @@ If new read/write permissions are added to the options object then the app user 
 `initHealthKit` requires an options object with Healthkit permission settings
 
 ```javascript
-import AppleHealthKit from 'rn-apple-healthkit';
+import AppleHealthKit from '@mypthub/rn-apple-healthkit';
 
 let options = {
     permissions: {
@@ -155,10 +156,10 @@ The available Healthkit permissions to use with `initHealthKit`
 | Weight                 | [HKQuantityTypeIdentifierBodyMass](https://developer.apple.com/reference/Healthkit/hkquantitytypeidentifierbodymass?language=objc)                                 | ✓    | ✓     |
 | BodyFatPercentage      | [HKQuantityTypeIdentifierBodyFatPercentage](https://developer.apple.com/reference/Healthkit/hkquantitytypeidentifierbodyfatpercentage?language=objc)                                 | ✓    | ✓     |
 
-These permissions are exported as constants of the `rn-apple-healthkit` module.
+These permissions are exported as constants of the `@mypthub/rn-apple-healthkit` module.
 
 ```javascript
-import AppleHealthKit from 'rn-apple-healthkit';
+import AppleHealthKit from '@mypthub/rn-apple-healthkit';
 
 // get the available permissions from AppleHealthKit.Constants object
 const PERMS = AppleHealthKit.Constants.Permissions;
