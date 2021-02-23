@@ -1,7 +1,7 @@
 {
   "name": "@mypthub/rn-apple-healthkit",
   "title": "React Native HealthKit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React Native package for interacting with Apple HealthKit",
   "main": "index.js",
   "scripts": {
