@@ -447,11 +447,9 @@
         case HKWorkoutActivityTypeHandCycling:
             return @"HandCycling";
         default:{
-            NSException *e = [NSException
-                              exceptionWithName:@"HKWorkoutActivityType InvalidValue"
-                              reason:@"HKWorkoutActivityType can only have a value from the HKWorkoutActivityType enum"
-                              userInfo:nil];
-            @throw e;
+            NSString *errorMsg = [NSString stringWithFormat: @"HKWorkoutActivityType %d can only have a value from the HKWorkoutActivityType enum", enumValue];
+            NSLog(@"%@",errorMsg);
+            return @"Unknown";
         }
     }
 }
