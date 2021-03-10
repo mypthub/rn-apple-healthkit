@@ -1,3 +1,7 @@
+This private fork is no longer maintained. We now use [react-native-health](https://github.com/agencyenterprise/react-native-health). Any change requests should be PR'd into the public package.
+
+---
+
 # React Native Apple Healthkit
 
 A React Native bridge module for interacting with Apple Healthkit data. Check out the [full documentation](https://github.com/terrillo/rn-apple-healthkit/tree/master/docs). This fork of [terrillo/rn-apple-healthkit](https://github.com/terrillo/rn-apple-healthkit) includes Distance Swimming and handling for workoutType.
